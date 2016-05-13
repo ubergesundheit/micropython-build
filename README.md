@@ -1,3 +1,6 @@
+Attention: The binary is untested!
+
+
 build micropython in docker..
 
 `docker build -t micropython .`
