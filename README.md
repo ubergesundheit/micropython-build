@@ -7,10 +7,10 @@ The repository provides a `Dockerfile` to build the [Micropython](https://microp
 Build Instructions
 ------------------
 
-Build the docker image. To specify a particular version of micropython provide it through the `build-args`. Otherwise the HEAD of the master branch will be used.
+Build the docker image. To specify a particular version of micropython provide it through the `build-arg`. Otherwise the HEAD of the master branch will be used.
 
 ```bash
-  docker build -t micropython --build-args VERSION=v1.8.1 .
+  docker build -t micropython --build-arg VERSION=v1.8.1 .
 ```
 
 Once the container is built successfuly create a container from the image
