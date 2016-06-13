@@ -32,3 +32,14 @@ The firmware can then be uploaded with the esptool
 ```
 
 Here `${SERIAL_PORT}` is the path to the serial device on which the board is connected.
+
+Flash from within Container
+---------------------------
+
+If you have built the image directly on your host (Linux), you also can flash your ESP directly by running a container from the image.
+
+```bash
+docker run --rm -it --device ${SERIAL_PORT} --user root --workdir /micropython/esp8266 micropython make PORT=${SERIAL_PORT} deploy
+```
+
+Here `${SERIAL_PORT}` is the path to the serial device on which the board is connected.
